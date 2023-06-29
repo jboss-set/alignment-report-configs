@@ -19,7 +19,9 @@
       ]
     },
 
-    "com.h2database:*": "NEVER",
+    "com.h2database:*": {
+      "STREAM" : "MICRO"
+    },
 
     "com.google.guava:guava" : {
       "STREAM" : "MICRO",
@@ -40,6 +42,10 @@
     "org.bouncycastle:*" : {
       "STREAM" : "MINOR",
       "IGNORE" : "1\\.64"
+    },
+
+    "org.smalltye:jandex" : {
+      "STREAM" : "MINOR"
     },
 
     "org.wildfly.transaction:wildfly-transaction-client" : {
