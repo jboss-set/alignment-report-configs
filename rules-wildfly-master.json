@@ -1,0 +1,50 @@
+{
+  "repositories" : {
+    "Central": "https://repo1.maven.org/maven2/",
+    "JBossPublic": "https://repository.jboss.org/nexus/content/repositories/public/"
+  },
+
+  "ignoreScopes" : [ "test" ],
+
+  "rules" : {
+
+    "*:*" : {
+      "STREAM" : "MICRO",
+      "IGNORE" : [
+        "[.-]SNAPSHOT",
+        "[.-]CR\\d+",
+        "[.-]RC\\d+",
+        "[.-]b\\d+",
+        "[.-]format-\\d+"
+      ]
+    },
+
+    "com.h2database:*": "NEVER",
+
+    "com.google.guava:guava" : {
+      "STREAM" : "MICRO",
+      "QUALIFIER" : "jre"
+    },
+
+    "io.jaegertracing:*" : {
+      "IGNORE" : "0\\.34\\.2"
+    },
+
+    "org.apache.activemq:*" : {
+      "STREAM" : "MINOR",
+      "IGNORE" : [
+        "[.-]SNAPSHOT"
+      ]
+    },
+
+    "org.bouncycastle:*" : {
+      "STREAM" : "MINOR",
+      "IGNORE" : "1\\.64"
+    },
+
+    "org.wildfly.transaction:wildfly-transaction-client" : {
+      "IGNORE" : "1\\.1\\.12\\.Final-redhat-00001"
+    }
+
+  }
+}
