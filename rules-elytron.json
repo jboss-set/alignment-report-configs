@@ -1,0 +1,19 @@
+{
+  "ignoreScopes" : [ "test" ],
+
+  "rules" : {
+
+    "*:*" : {
+      "STREAM" : "MICRO",
+      "QUALIFIER" : [
+        "",
+        "Final",
+        "final",
+        "Final-jbossorg-\\d+",
+        "final-jbossorg-\\d+",
+        "GA"
+      ]
+    }
+
+  }
+}
