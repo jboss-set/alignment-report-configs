@@ -23,7 +23,9 @@
         "[.-]Alpha[.-]?\\d*$",
         "[.-]format-\\d+$",
         "[.-]M-?[a-zA-Z0-9]*$",
-        "[.-]Dev-?\\d*$"
+        "[.-]Dev-?\\d*$",
+        "[.-]jdk5$",
+        "[.-]MR$"
       ]
     },
 
@@ -49,7 +51,7 @@
 
     "org.bouncycastle:*" : {
       "STREAM" : "MINOR",
-      "IGNORE" : "1\\.64"
+      "IGNORE" : "1\\.64\\."
     },
 
     "org.smalltye:jandex" : {
@@ -58,6 +60,17 @@
 
     "org.wildfly.transaction:wildfly-transaction-client" : {
       "IGNORE" : "1\\.1\\.12\\.Final-redhat-00001"
+    },
+
+    "jakarta.*:*" : {
+      "ONLY_STREAM" : "MICRO",
+      "IGNORE" : [
+        "[.-]MR$"
+      ]
+    },
+
+    "org.eclipse.microprofile.*:*" : {
+      "ONLY_STREAM" : "MICRO"
     }
 
   }
